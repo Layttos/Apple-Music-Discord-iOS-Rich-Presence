@@ -3,9 +3,6 @@
 Affiche sur ton profil Discord ce que joue **l'application Musique de ton iPhone**,
 en continu, y compris écran éteint. Scrobble aussi sur Last.fm, si tu veux.
 
-**Aucun serveur.** L'app tient elle-même la connexion à Discord, résout les
-pochettes et envoie les scrobbles. Pas de VPS, pas de domaine, pas de Docker.
-
 ```
 ┌──────────────────────────────┐        ┌─────────┐
 │           iPhone             │───────▶│ Discord │
