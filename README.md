@@ -184,9 +184,13 @@ cause la plus fréquente d'un `Invalid method signature`.
 
 ```bash
 xcodegen generate    # régénère le projet Xcode depuis project.yml
-./lint.sh            # SwiftLint + analyse syntaxique
+swiftlint            # règles dans .swiftlint.yml
 ./icon/build-icon.sh # régénère l'icône depuis icon/AppIcon.svg
 ```
+
+> Sans installation complète d'Xcode, SwiftLint ne trouve pas `sourcekitd` et
+> s'interrompt au démarrage. Le lancer alors avec
+> `DYLD_FRAMEWORK_PATH=/Library/Developer/CommandLineTools/usr/lib`.
 
 L'icône est vectorielle ([`icon/AppIcon.svg`](icon/AppIcon.svg)) : elle se retouche
 et se réexporte sans perte. Le script l'aplatit sur un fond opaque, iOS refusant
