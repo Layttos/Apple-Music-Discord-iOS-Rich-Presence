@@ -1,0 +1,44 @@
+# SwiftLint a besoin de sourcekitd. Sans Xcode installé, passer par ./lint.sh,
+# qui le fait pointer sur les Command Line Tools.
+
+included:
+  - AppleMusicPresenceLocal
+
+line_length:
+  warning: 120
+  error: 200
+  # Les chaînes en français sont volontairement longues et lisibles telles quelles.
+  ignores_comments: true
+  ignores_urls: true
+
+identifier_name:
+  # `ok` reflète le champ JSON du serveur, `ms` est un paramètre local sans ambiguïté.
+  min_length: 2
+  excluded:
+    - id
+
+type_body_length:
+  warning: 350
+  error: 500
+
+file_length:
+  warning: 450
+  error: 700
+
+function_body_length:
+  warning: 80
+  error: 120
+
+nesting:
+  # Les `CodingKeys` d'un type Codable imbriqué atteignent trois niveaux :
+  # les sortir du type qu'elles décrivent serait moins lisible.
+  type_level: 2
+
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - first_where
+  - last_where
+  - redundant_nil_coalescing
+  - toggle_bool
+  - unneeded_parentheses_in_closure_argument

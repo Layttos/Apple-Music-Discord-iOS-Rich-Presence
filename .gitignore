@@ -1,0 +1,11 @@
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+build/
+
+# Le projet se régénère depuis project.yml : `xcodegen generate`
+AppleMusicPresenceLocal.xcodeproj/
+
+.DS_Store
